@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Static CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.pdf" download>Download Resume</a>
+</nav>
+
+<section class="hero">
+    <h1 class="animate__animated animate__fadeInDown">
+        Hi, I'm Khushboo
+    </h1>
+
+    <!-- Typing Roles -->
+    <h2 class="role-text">
+        <span id="typing"></span>
+    </h2>
+
+    <!-- Tech Stack -->
+    <div class="tech-stack" data-aos="fade-up" data-aos-delay="300">
+        <h3>Tech Stack</h3>
+        <div class="tech-items">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>PySpark</span>
+            <span>S3</span>
+            <span>Redshift</span>
+            <span>Azure</span>
+        </div>
+    </div>
+</section>
+
+<section class="about" data-aos="fade-up">
+    <h3>About Me</h3>
+    <p>
+        I build scalable cloud-based data pipelines using Python, AWS, Azure, PySpark and SQL.
+    </p>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
+<!-- Static JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Projects</title>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Static CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.pdf" download>Download Resume</a>
+</nav>
+
+<section class="projects-section">
+    <h1 class="animate__animated animate__fadeInDown">My Projects</h1>
+
+    <div class="projects-container">
+
+        <div class="project-card" data-aos="zoom-in">
+            <h3>Sample Detail Project</h3>
+            <p>Flask based web application.</p>
+            <a href="https://github.com/khushbooregundawar96-hub/sampledetail" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>Login Project</h3>
+            <p>User authentication system.</p>
+            <a href="https://github.com/khushbooregundawar96-hub/loginrepo" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+            <h3>Web Project</h3>
+            <p>Responsive frontend website.</p>
+            <a href="https://github.com/khushbooregundawar96-hub/webrepo" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+            <h3>React Landing Page</h3>
+            <p>Modern React UI design.</p>
+            <a href="https://github.com/khushbooregundawar96-hub/landing-page-template-reactjs-anand" target="_blank">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
+<!-- Optional if your typing animation is global -->
+<script src="script.js"></script>
+
+</body>
+</html>

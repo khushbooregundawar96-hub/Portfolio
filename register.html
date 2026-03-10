@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <!-- Static CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Animate.css (keeping animation consistency) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.pdf" download>Download Resume</a>
+</nav>
+
+<div class="register-container">
+    <form id="registerForm" class="register-form animate__animated animate__fadeInUp">
+        <h2>Register Here</h2>
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="tel" id="mobile" placeholder="Enter Mobile" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Supabase JS -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+    const supabaseClient = supabase.createClient(
+        "https://hmfvsaplsplubsbwuhqx.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtZnZzYXBsc3BsdWJzYnd1aHF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0ODEyMzksImV4cCI6MjA4NzA1NzIzOX0.5StA1FZT7MGjG0M892CKnimQ4hZJNbRUDkGs8gL0Cp0"
+    );
+
+    document.getElementById("registerForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+
+        const { data, error } = await supabaseClient
+            .from("users")
+            .insert([{ name, email, mobile }]);
+
+        if (error) {
+            alert("Error: " + error.message);
+        } else {
+            alert("Registration Successful!");
+            document.getElementById("registerForm").reset();
+        }
+    });
+</script>
+
+</body>
+</html>
